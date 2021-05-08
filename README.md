@@ -1,27 +1,24 @@
-# Vertel
-Additional tools for development at Vertel
+# Ericsson
+Additional tools for development at Ericsson
 
 ## Install and uninstall
 ```
-wget -O- https://raw.githubusercontent.com/lukasp2/vertel/main/install | bash
+wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/main/install | bash
 ```
 ```
-wget -O- https://raw.githubusercontent.com/lukasp2/vertel/main/uninstall | bash
+wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/main/uninstall | bash
 ```
 
 ## Tools
-* **lpbackup** - create a backup of a database \
-usage: `lpbackup [DATABASE]`
+* empty
 
 ## Extra
-* **lpps1** - a PS1 git branch indicator \
-usage: `lpps1 [OPTIONS]`
-```
-OPTIONS:
--t, --temporary: set PS1 environment variable in this shell only (default)
--p, --permanent: set PS1 environment variable in ~/.bash_aliases
-```
+* empty
 
 ## Upcomming
-* **lpupdm** - odooupdm with input validation (checks if db and modules exist), whitespace support and better output \
-usage: `lpupdm [DB] [MODULE] ...`
+* **lpupzip** - get link to UP .zip file from MIA \
+usage: `lpupzip [UP name]`
+
+* **lpnode** - translate node IP to node name and vice versa \
+usage: `lpnode [-i IP] | [-n node name]`
+
