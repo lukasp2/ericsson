@@ -17,9 +17,6 @@ OPTIONS:
 -c CLASS_NAME: searches for models with class name = CLASS_NAME
 ```
 
-## Extra
-* empty
-
 ## Upcomming
 * **lpupzip** - get link to UP .zip file from MIA \
 usage: `lpupzip [UP name]`
