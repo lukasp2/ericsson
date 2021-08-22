@@ -10,7 +10,12 @@ wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/main/uninstall | bas
 ```
 
 ## Tools
-* empty
+* **lpfind** - finds a class and lists file of definition and inheritances \
+usage: `lpfind [OPTIONS]`
+```
+OPTIONS:
+-c CLASS_NAME: searches for models with class name = CLASS_NAME
+```
 
 ## Extra
 * empty
