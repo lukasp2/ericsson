@@ -3,10 +3,10 @@ Additional tools for development at Ericsson
 
 ## Install and uninstall
 ```
-wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/main/install | bash
+wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/master/install | bash
 ```
 ```
-wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/main/uninstall | bash
+wget -O- https://raw.githubusercontent.com/lukasp2/ericsson/master/uninstall | bash
 ```
 
 ## Tools
