@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source colors.sh
+source ../resources/colors.sh
 
 while getopts c: option; do
     case "${option}" in
