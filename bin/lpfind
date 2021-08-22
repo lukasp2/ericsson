@@ -1,0 +1,35 @@
+#!/bin/bash
+
+source colors.sh
+
+while getopts c: option; do
+    case "${option}" in
+        c) CLASSNAME=${OPTARG}
+           c=y
+           ;;
+    esac
+done
+
+WORK_DIR="/repo/epohluk/rpcppg2/rpc/cell"
+
+# >>> -c: SEARCH CLASS NAME
+if [[ $c == y ]]; then
+    echo -e "class ${Yellow}${CLASSNAME}${NC} in $WORK_DIR"
+    echo -e "\t${NC}DEFINITIONS${NC}"
+    matches=$(grep -Rns --include={*.cc,*.h} "class $CLASSNAME .*{" $WORK_DIR)
+    for match in "$matches"; do
+        file=$(echo "$match" | cut -d ":" -f 1)
+        line=$(echo "$match" | cut -d ":" -f 2)
+        text=$(echo "$match" | cut -d ":" -f 3- | cut -d " " -f2-)
+        echo -e "($line) ${NC}$file${NC} : $text"
+    done
+
+    echo -e "\n\t${NC}CHILDREN${NC}"
+    matches=$(grep -Rns --include={*.cc,*.h} "class .* : .* $CLASSNAME .*{" $WORK_DIR)
+    for match in "$matches"; do
+        file=$(echo "$match" | cut -d ":" -f 1)
+        line=$(echo "$match" | cut -d ":" -f 2)
+        text=$(echo "$match" | cut -d ":" -f 3- | cut -d " " -f2)
+        echo -e "($line) ${NC}$file${NC} : $text"
+    done
+fi
