@@ -10,6 +10,6 @@ git clone https://github.com/lukasp2/ericsson.git ~/lptools
 
 cd $pwd
 
-if [ ! -f "$HOME/.bash_aliases" ] || [ -z $(grep -o "$HOME/lptools/bin" $HOME/.bash_aliases) ]; then
-    echo "PATH=$HOME/lptools/bin:$PATH" >> $HOME/.bash_aliases
+if [ ! -f "$HOME/.bashrc.user" ] || [ -z $(grep -o "$HOME/lptools/bin" $HOME/.bashrc.user) ]; then
+    echo "PATH=$HOME/lptools/bin:$PATH" >> $HOME/.bashrc.user
 fi
